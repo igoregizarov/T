@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|title }}
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block menu %}
+            <ul class="menu">
+                {% if user.is_superuser %}
+                <li><a href="/admin" class="a"> Админка </a></li>
+                {% endif %}
+                <li><a href="{% url 'main' %}">главная</a></li>
+                <li><a href="{% url 'registers' %}">регистрация</a></li>
+                <li><a href="{% url 'contacts' %}">контакты</a></li>
+            </ul>
+        {% endblock %}
+
+        {% block content %}
+
+        {% endblock %}
+	</div>
+        {% block footer %}
+            {% if user.is_authenticated %}
+            {{ user.username|default:'Пользователь' }}
+            {% else %}
+            NO
+            {% endif %}
+    <p> &copy; {% now "D M Y" %} </p>
+        {% endblock %}
+</body>
+</html>

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724a97aa-370d-4751-b903-c19bc784f8fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling/mainapp/templates/mainapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/polling/mainapp/templates/mainapp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling/polling/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling/polling/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/polling/polling/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/polling/polling/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -32,6 +35,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/polling/authapp/migrations/templates/authapp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\T\polling\authapp\migrations\templates\authapp" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -47,6 +56,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="526" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1644497170127">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1644497170127" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1644474132278">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
