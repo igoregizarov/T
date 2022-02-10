@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            {{ title|title }}
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block menu %}
+            <ul class="menu">
+                <li><a href="{% url 'main' %}">главная</a></li>
+                <li><a href="{% url 'registers' %}">регистрация</a></li>
+                <li><a href="{% url 'contacts' %}">контакты</a></li>
+            </ul>
+        {% endblock %}
+
+        {% block content %}
+
+        {% endblock %}
+	</div>
+        {% block footer %}
+            {% now "D M Y" %}
+        {% endblock %}
+</body>
+</html>
