@@ -9,7 +9,7 @@
         {% endblock %}
     </title>
     {% block css %}
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href='{% static "css/style.css"%}'>
     {% endblock %}
 </head>
 <body>
@@ -17,15 +17,15 @@
         {% block menu %}
             <ul class="menu">
                 {% if user.is_superuser %}
-                <li><a href="/admin" class="a"> Админка </a></li>
+                <li><a href="/admin"> Админка </a></li>
                 {% endif %}
                 <li><a href="{% url 'main' %}">главная</a></li>
-                <li><a href="{% url 'registers' %}">регистрация</a></li>
-                <li><a href="{% url 'contacts' %}">контакты</a></li>
+                <li><a href="http://igornsk.pythonanywhere.com/contacts/">контакты</a></li>
 
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'auth:logout' %}"> выход </a></li>
-                <li><a href="{% url 'auth:edit' %}"> редактирование </a></li>
+                <li><a href="{% url 'auth:edit' %}"> редактирование профиля </a></li>
+                <li><a href="{% url 'poll:poll' %}"> опросник </a></li>
                 {% else %}
                 <li><a href="{% url 'auth:login' %}"> вход </a></li>
                 <li><a href="{% url 'auth:register' %}"> регистрация </a></li>
@@ -33,13 +33,16 @@
 
             </ul>
         {% endblock %}
-
-        {% block content %}
             {% if user.is_authenticated %}
             {{ user.username|default:'Пользователь' }}
+                    {% block content %}
+
+                    {% endblock %}
             {% else %}
-            NO
+            NO REGISTRATIONS
             {% endif %}
+        {% block content_1 %}
+
         {% endblock %}
 	</div>
         {% block footer %}

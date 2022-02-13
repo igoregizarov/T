@@ -31,7 +31,8 @@ class PollingUserRegisterForm(UserCreationForm):
 
     def save(self):
         user = super().save()
-        user.is_active = False
+        user.is_active = True
+        user.is_staff = True
         salt = hashlib.sha1(str(random.random()).encode('utf8')).hexdigest()[:6]
         user.activations_key = hashlib.sha1((user.email + salt).encode('utf8')).hexdigest()
         user.save()

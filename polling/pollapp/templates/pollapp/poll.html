@@ -1,0 +1,24 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+    <ul class="menu">
+        <li><a href="{% url 'poll:quest' %}"> создать опрос </a></li>
+    </ul>
+    <h1>Опросы</h1>
+    {% for question in questions_list %}
+        <h4>{{ question.id }} {{ question.name }}</h4>
+        Ответы:
+        {% for answer in answer_list %}
+            {% if answer.questions_id_id == question.id %}
+                <h4>{{ answer.name }}</h4>
+            {% endif %}
+                <form class="my_form_class" action= "{% url 'poll:poll' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ choise_poll_form.as_p }}
+                    <input type="submit" value="сохранить">
+                </form>
+        {% endfor %}
+
+    {% endfor %}
+
+{% endblock %}

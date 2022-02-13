@@ -1,7 +1,7 @@
-{% extends 'authapp/base.html' %}
+{% extends 'mainapp/base.html' %}
 {% load static %}
 
-{% block content %}
+{% block content_1 %}
     <form class="my_form_class" action= "{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ register_form.as_p }}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'authapp',
+    'pollapp',
 ]
 
 AUTH_USER_MODEL = 'authapp.PollingUser'

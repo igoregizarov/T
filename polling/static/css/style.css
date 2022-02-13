@@ -1,4 +1,26 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(0deg, rgba(152, 195, 232, 0), #EBF3FB);
+    min-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.menu {
+
+}
+
+.div_poll {
+    width: 1000px; /* Размеры */
+    background: #fc0; /* Цвет фона */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid #fff; /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
 }

@@ -22,9 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainapp.main, name='main'),
-    path('registers/', mainapp.registers, name='registers'),
-    path('contacts/', mainapp.contacts, name='contacts'),
     path('auth/', include('authapp.urls', namespace='auth')),
+    path('poll/', include('pollapp.urls', namespace='poll')),
 ]
 
 
